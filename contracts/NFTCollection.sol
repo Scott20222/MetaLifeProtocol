@@ -24,7 +24,7 @@ contract NFTCollection is Ownable, ERC721Enumerable, ERC721URIStorage {
     //metaInfo
     string public metaInfo;
     // Events
-    event Mint(uint256 tokenId, address recipient);
+    event Mint(uint256 tokenId, indexed address recipient);
 
     constructor(string memory name_, string memory symbol_, string memory baseURI_, uint max_supply_)
     ERC721(name_, symbol_) {
